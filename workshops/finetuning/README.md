@@ -4,19 +4,21 @@
 Before you begin, these labs use GPU instances (listed below). Please ensure that you have the quota to satisfy the training/ inference needs.
 | Instance Type | Quantity | Purpose |
 | ------------- | -------- | ------- |
-| ml.g5.12xlarge | 1 | Training job usage |
-| ml.g5.12xlarge | 1 | Endpoint usage |
+| ml.g5.12xlarge | 4 | Training job usage |
+| ml.g5.12xlarge | 2 | Endpoint usage |
 | ml.g5.24xlarge | 1 | Training job usage |
 | ml.g5.24xlarge | 1 | Endpoint usage |
-| ml.p3.16xlarge | 1 | Training job usage |
+| ml.p3.16xlarge | 2 | Training job usage |
 | ml.p3.2xlarge  | 3 | Training job usage |
 | ml.p3.2xlarge  | 3 | Endpoint usage |
-| ml.g4dn.8xlarge | 1 | Training job usage |
+| ml.g4dn.8xlarge | 6 | Training job usage |
 
 To check you existing quota values, use AWS Management Console -> `Service Quotas` -> `AWS Services` -> `Amazon Sagemaker` -> search for the instance type above in the search bar.
 
 
 If you do not have the required quota, [Request quota increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html).
+
+### TODO: Add a cost estimate of running each lab below.
 
 ## Lab 1 - Instruction fine-tune a text-to-text flan-t5-base model
 
