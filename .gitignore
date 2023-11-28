@@ -1,2 +1,4 @@
 ./streamlit-langchain/apikey.py
 ./qa-with-pdf/.env
+./sec-bot/apikey.py
+./sec-bot/__pycache__/apikey.cpython-310.pyc

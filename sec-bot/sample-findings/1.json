@@ -1,0 +1,78 @@
+{
+    "Findings": [
+        {
+            "LastObservedAt": "2018-12-10T08:54:03Z",
+            "FirstObservedAt": "2018-12-10T08:54:03Z",
+            "GeneratorId": "arn:aws:inspector:us-east-1:123456789012:target/0-abcdabcd",
+            "Severity": {
+                "Product": 9,
+                "Normalized": 45
+            },
+            "Title": "On instance i-abcdabcd123456789, TCP port 21 which is associated with 'FTP' is reachable from the Internet.",
+            "Resources": [
+                {
+                    "Region": "us-east-1",
+                    "Partition": "aws",
+                    "Type": "AwsEc2Instance",
+                    "Id": "arn:aws:ec2:us-east-1:123456789012:instance/i-abcdabcd123456789",
+                    "Details": {
+                        "AwsEc2Instance": {
+                            "SubnetId": "subnet-abcd1234",
+                            "VpcId": "vpc-12345678",
+                            "ImageId": "ami-012345678aaaabbbb"
+                        }
+                    }
+                }
+            ],
+            "WorkflowState": "NEW",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/inspector",
+            "Confidence": 10,
+            "ProductFields": {
+                "attributes:7/key": "SECURITY_GROUP",
+                "attributes:9/value": "acl-1234abcd",
+                "aws/securityhub/ProductName": "Inspector",
+                "attributes:7/value": "sg-012345678abcdabcd",
+                "attributes:4/value": "TCP",
+                "attributes:1/key": "RULE_TYPE",
+                "serviceAttributes/schemaVersion": "1",
+                "attributes:5/value": "igw-abcd1234",
+                "serviceAttributes/rulesPackageArn": "arn:aws:inspector:us-east-1:123456789012:rulespackage/0-abcdabcd",
+                "attributes:6/key": "VPC",
+                "attributes:4/key": "PROTOCOL",
+                "attributes:3/value": "FTP",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/inspector/arn:aws:inspector:us-east-1:123456789012:target/0-aaaabbbb/template/0-abcd1234/run/0-aabbccdd/finding/0-abcdabcd",
+                "attributes:6/value": "vpc-12345678",
+                "attributes:9/key": "ACL",
+                "attributes:0/value": "eni-089c2f505015c6291",
+                "aws/securityhub/SeverityLabel": "MEDIUM",
+                "attributes:10/value": "i-0abcd1234abcd1234",
+                "attributes:3/key": "PORT_GROUP_NAME",
+                "attributes:8/key": "REACHABILITY_TYPE",
+                "attributes:2/value": "21",
+                "attributes:5/key": "IGW",
+                "attributes:2/key": "PORT",
+                "attributes:1/value": "RecognizedPortNoAgent",
+                "attributes:8/value": "Internet",
+                "serviceAttributes/assessmentRunArn": "arn:aws:inspector:us-east-1:123456789012:target/0-aaaabbbb/template/0-abcd1234/run/0-aabbccdd",
+                "attributes:10/key": "INSTANCE_ID",
+                "attributes:0/key": "ENI",
+                "aws/securityhub/CompanyName": "AWS"
+            },
+            "RecordState": "ACTIVE",
+            "CreatedAt": "2018-12-10T08:54:03Z",
+            "UpdatedAt": "2018-12-10T08:54:03Z",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "You can edit the Security Group sg-abcdabcd123456789 to remove access from the Internet on port 21."
+                }
+            },
+            "Description": "On this instance, TCP port 21, which is associated with FTP, is reachable from the Internet. You can install the Inspector agent on this instance and re-run the assessment to check for any process listening on this port. The instance i-abcdabcd123456789 is located in VPC vpc-12345678 and has an attached ENI eni-0abcd1234abcd1234 which uses network ACL acl-1234abcd. The port is reachable from the Internet through Security Group sg-012345678abcdabcd and IGW igw-abcd1234.",
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:inspector:us-east-1:123456789012:target/0-aaaabbbb/template/0-abcd1234/run/0-aabbccdd/finding/0-abcdabcd",
+            "Types": [
+                "Software and Configuration Checks/AWS Security Best Practices/Network Reachability - Recognized port reachable from internet"
+            ],
+            "AwsAccountId": "123456789012"
+        }
+    ]
+}

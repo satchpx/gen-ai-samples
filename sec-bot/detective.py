@@ -92,6 +92,14 @@ if __name__ == '__main__':
 
     prompt = st.text_input('This tool analyzes findings in the uploaded json file. Ask any related questions here')
 
+    st.write("If the remedial action look good to you, I can attempt to fix it. Would you like me to?")
+    st.button("No", type="primary")
+    if st.button("Yes! Fix it!"):
+        st.write("Okay.. Fixing it...")
+        # Call the auto-fix function here
+    else:
+        st.write("Waiting for your command!")
+
     if uploaded_file:
         # Run inference
         # template with a placeholder for json data
@@ -130,7 +138,7 @@ if __name__ == '__main__':
         ## Add auto fix code below
         st.write("If the remedial action look good to you, I can attempt to fix it. Would you like me to?")
         st.button("No", type="primary")
-        if st.button("Fix it!"):
+        if st.button("Yes! Fix it!"):
             st.write("Okay.. Fixing it...")
             # Call the auto-fix function here
         else:
